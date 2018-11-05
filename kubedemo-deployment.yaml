@@ -2,22 +2,22 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: mydemo
-  name: mydemo
+    app: demo
+  name: demo
   namespace: kubedemo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mydemo  
+      app: demo  
   template:
     metadata:
       labels:
-        app: mydemo
+        app: demo
     spec:    
       containers:
-        - name: mydemo        
-          image: reg.zmalloc.org:5000/hello
+        - name: demo        
+          image: reg.zmalloc.org:5000/rocket
           livenessProbe:
             httpGet:
               port: http

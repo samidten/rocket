@@ -6,7 +6,7 @@ IP=192.168.0.111
 echo $IP
 
 # Get the NodePort of the service
-NODEPORT=$(kubectl --namespace=kubedemo get services mydemo -o yaml | grep nodePort | cut -f2 -d:)
+NODEPORT=$(kubectl --namespace=kubedemo get services demo -o yaml | grep nodePort | cut -f2 -d:)
 
 echo $NODEPORT
 
